@@ -8,5 +8,6 @@ export default StyleSheet.create({
   },
   header: {
     fontSize: 16,
+    fontFamily: 'Montserrat-ExtraLight',
   },
 });
