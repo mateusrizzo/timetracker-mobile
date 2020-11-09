@@ -22,11 +22,6 @@ const styles = StyleSheet.create({
   background: {
     flex: 1,
     backgroundColor: '#E5E5E5',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  sampleText: {
-    fontSize: 22,
   },
 });
 

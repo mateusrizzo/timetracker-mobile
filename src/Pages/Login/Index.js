@@ -1,22 +1,33 @@
 import React from 'react';
-import {Text, TextInput, View, TouchableOpacity} from 'react-native';
+import {
+  Text,
+  TextInput,
+  View,
+  TouchableOpacity,
+  ScrollView,
+} from 'react-native';
 
 import styles from './styles';
 
 export default function Login() {
   return (
-    <View style={styles.container}>
-      <View style={styles.titleContainer}>
-        <Text style={styles.title}>Cronum</Text>
-        <Text style={styles.subtitle}>Timetracking made easy</Text>
+    <ScrollView keyboardShouldPersistTaps="never">
+      <View style={styles.container}>
+        <View style={styles.titleContainer}>
+          <Text style={styles.title}>Cronum</Text>
+          <Text style={styles.subtitle}>Timetracking made easy</Text>
+        </View>
+        <View style={styles.form}>
+          <TextInput style={styles.input} placeholder="Email" />
+          <TextInput
+            style={[styles.input, styles.bottomInput]}
+            placeholder="Password"
+          />
+        </View>
+        <TouchableOpacity style={styles.loginButton}>
+          <Text style={styles.buttonText}>Login</Text>
+        </TouchableOpacity>
       </View>
-      <View>
-        <TextInput />
-        <TextInput />
-      </View>
-      <TouchableOpacity>
-        <Text>Login</Text>
-      </TouchableOpacity>
-    </View>
+    </ScrollView>
   );
 }
