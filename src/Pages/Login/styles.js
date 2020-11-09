@@ -7,7 +7,7 @@ export default StyleSheet.create({
     justifyContent: 'center',
   },
   header: {
-    fontSize: 16,
+    fontSize: 22,
     fontFamily: 'Montserrat-ExtraLight',
   },
 });
