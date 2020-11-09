@@ -1,12 +1,18 @@
 import React from 'react';
 import {SafeAreaView, Text, StatusBar, StyleSheet} from 'react-native';
 
+import Login from './src/Pages/Login/Index';
+
 function App() {
   return (
     <>
-      <StatusBar barStyle="dark-content" translucent />
+      <StatusBar
+        barStyle="dark-content"
+        backgroundColor="#E5E5E5"
+        translucent
+      />
       <SafeAreaView style={styles.background}>
-        <Text style={styles.sampleText}>Cronum</Text>
+        <Login />
       </SafeAreaView>
     </>
   );
