@@ -1,5 +1,5 @@
 import React from 'react';
-import {SafeAreaView, Text, StatusBar, StyleSheet} from 'react-native';
+import {View, StatusBar, StyleSheet} from 'react-native';
 
 import Login from './src/Pages/Login/Index';
 
@@ -11,9 +11,9 @@ function App() {
         backgroundColor="#E5E5E5"
         translucent
       />
-      <SafeAreaView style={styles.background}>
+      <View style={styles.background}>
         <Login />
-      </SafeAreaView>
+      </View>
     </>
   );
 }
