@@ -27,8 +27,11 @@ export default StyleSheet.create({
   input: {
     width: 290,
     height: 36,
-    borderWidth: 1,
     fontFamily: 'Roboto-Thin',
+    elevation: 2,
+    shadowOffset: {width: 0, height: 0},
+    shadowRadius: 90,
+    shadowOpacity: 0.7,
   },
   bottomInput: {
     marginTop: 30,
