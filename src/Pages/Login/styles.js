@@ -22,9 +22,18 @@ export default StyleSheet.create({
     alignItems: 'center',
     marginTop: 60,
   },
-  input: {
+  inputContainer: {
     width: 315,
     height: 60,
+    flexDirection: 'row',
+    backgroundColor: '#BBDEFB',
+    alignItems: 'center',
+  },
+  icon: {
+    marginLeft: 15,
+  },
+  input: {
+    flex: 1,
     fontFamily: 'Montserrat-Medium',
     backgroundColor: '#BBDEFB',
   },

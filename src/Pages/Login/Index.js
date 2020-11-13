@@ -22,7 +22,7 @@ export default function Login() {
         <Image style={styles.image} source={SignInImage} />
         <View style={styles.form}>
           <View style={styles.inputContainer}>
-            <Icon name="mail" size={14} color="#B0B0C3" />
+            <Icon name="mail" size={14} color="#B0B0C3" style={styles.icon} />
             <TextInput style={styles.input} placeholder="Email" />
           </View>
           <TextInput
