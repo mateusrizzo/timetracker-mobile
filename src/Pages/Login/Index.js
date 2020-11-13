@@ -14,8 +14,7 @@ export default function Login() {
     <ScrollView keyboardShouldPersistTaps="never">
       <View style={styles.container}>
         <View style={styles.titleContainer}>
-          <Text style={styles.title}>Cronum</Text>
-          <Text style={styles.subtitle}>Timetracking made easy</Text>
+          <Text style={styles.title}>Sign In</Text>
         </View>
         <View style={styles.form}>
           <TextInput style={styles.input} placeholder="Email" />
