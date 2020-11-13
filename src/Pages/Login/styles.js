@@ -14,15 +14,13 @@ export default StyleSheet.create({
     fontFamily: 'Montserrat-SemiBold',
     textAlign: 'center',
   },
-  subtitle: {
-    fontSize: 20,
-    marginTop: 7,
-    fontFamily: 'Roboto-Thin',
+  image: {
+    marginTop: 51,
   },
   form: {
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: 160,
+    marginTop: 60,
   },
   input: {
     width: 315,
