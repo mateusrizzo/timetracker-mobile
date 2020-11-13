@@ -10,8 +10,8 @@ export default StyleSheet.create({
     marginTop: 60,
   },
   title: {
-    fontSize: 28,
-    fontFamily: 'Montserrat-ExtraLight',
+    fontSize: 22,
+    fontFamily: 'Montserrat-SemiBold',
     textAlign: 'center',
   },
   subtitle: {
@@ -27,14 +27,14 @@ export default StyleSheet.create({
   input: {
     width: 315,
     height: 60,
-    fontFamily: 'Roboto-Thin',
+    fontFamily: 'Montserrat-Medium',
     backgroundColor: '#BBDEFB',
   },
   bottomInput: {
     marginTop: 20,
   },
   loginButton: {
-    marginTop: 120,
+    marginTop: 50,
     backgroundColor: '#00897B',
     width: 315,
     height: 60,
@@ -43,7 +43,7 @@ export default StyleSheet.create({
   buttonText: {
     color: '#Fdfafa',
     fontSize: 18,
-    fontFamily: 'Montserrat-ExtraLight',
+    fontFamily: 'Montserrat-Medium',
     alignSelf: 'center',
   },
 });
