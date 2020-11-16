@@ -25,10 +25,10 @@ export default function Login() {
             <Icon name="mail" size={14} color="#B0B0C3" style={styles.icon} />
             <TextInput style={styles.input} placeholder="Email" />
           </View>
-          <TextInput
-            style={[styles.input, styles.bottomInput]}
-            placeholder="Password"
-          />
+          <View style={[styles.inputContainer, styles.bottomInput]}>
+            <Icon name="lock" size={14} color="#B0B0C3" style={styles.icon} />
+            <TextInput style={styles.input} placeholder="Password" />
+          </View>
         </View>
         <TouchableOpacity style={styles.loginButton}>
           <Text style={styles.buttonText}>Login</Text>
