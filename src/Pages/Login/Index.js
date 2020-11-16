@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import {
   Text,
   TextInput,
@@ -12,10 +12,12 @@ import SignInImage from '../../assets/images/Illustration.png';
 
 import styles from './styles';
 
+import api from '../../network/api';
+
 export default function Login() {
   const [email, setEmail] = useState(null);
   const [password, setPassword] = useState(null);
-  function handleLogin() {}
+  async function handleLogin() {}
   return (
     <ScrollView keyboardShouldPersistTaps="never">
       <View style={styles.container}>
@@ -34,6 +36,8 @@ export default function Login() {
               keyboardType="email-address"
               returnKeyType="next"
               returnKeyLabel="next"
+              value={email}
+              onChangeText={setEmail}
             />
           </View>
           <View style={[styles.inputContainer, styles.bottomInput]}>
@@ -43,6 +47,8 @@ export default function Login() {
               placeholder="Password"
               secureTextEntry
               autoCompleteType="off"
+              value={password}
+              onChangeText={setPassword}
             />
           </View>
         </View>
