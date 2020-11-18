@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {useNavigation} from '@react-navigation/native';
 import {
   Text,
   TextInput,
@@ -17,6 +18,9 @@ import styles from './styles';
 export default function Login() {
   const [email, setEmail] = useState(null);
   const [password, setPassword] = useState(null);
+
+  const navigation = useNavigation();
+
   function handleLogin() {
     return console.log('oi');
   }
@@ -60,7 +64,7 @@ export default function Login() {
       </View>
       <View style={styles.signUpContainer}>
         <Text style={styles.signUpText}>Don't have an account?</Text>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('SignUp')}>
           <Text style={styles.signUpButtonText}> Don't lose time</Text>
         </TouchableOpacity>
       </View>
