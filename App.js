@@ -1,19 +1,21 @@
+import 'react-native-gesture-handler';
 import React from 'react';
-import {SafeAreaView, Text, StatusBar, StyleSheet} from 'react-native';
+import {View, StatusBar, StyleSheet} from 'react-native';
+// import {NavigationContainer} from '@react-navigation/native';
 
-import Login from './src/Pages/Login/Index';
+import Login from './src/pages/Login';
 
 function App() {
   return (
     <>
       <StatusBar
         barStyle="dark-content"
-        backgroundColor="#E5E5E5"
+        backgroundColor="#E3F2FD"
         translucent
       />
-      <SafeAreaView style={styles.background}>
+      <View style={styles.background}>
         <Login />
-      </SafeAreaView>
+      </View>
     </>
   );
 }
@@ -21,12 +23,7 @@ function App() {
 const styles = StyleSheet.create({
   background: {
     flex: 1,
-    backgroundColor: '#E5E5E5',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  sampleText: {
-    fontSize: 22,
+    backgroundColor: '#E3F2FD',
   },
 });
 
