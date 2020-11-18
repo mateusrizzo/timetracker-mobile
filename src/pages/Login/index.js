@@ -12,12 +12,14 @@ import SignInImage from '../../assets/images/Illustration.png';
 
 import styles from './styles';
 
-import api from '../../network/api';
+// import api from '../../network/api';
 
 export default function Login() {
   const [email, setEmail] = useState(null);
   const [password, setPassword] = useState(null);
-  async function handleLogin() {}
+  function handleLogin() {
+    return console.log('oi');
+  }
   return (
     <ScrollView keyboardShouldPersistTaps="never">
       <View style={styles.container}>
@@ -54,6 +56,12 @@ export default function Login() {
         </View>
         <TouchableOpacity style={styles.loginButton} onPress={handleLogin}>
           <Text style={styles.buttonText}>Login</Text>
+        </TouchableOpacity>
+      </View>
+      <View style={styles.signUpContainer}>
+        <Text style={styles.signUpText}>Don't have an account?</Text>
+        <TouchableOpacity>
+          <Text style={styles.signUpButtonText}> Don't lose time</Text>
         </TouchableOpacity>
       </View>
     </ScrollView>

@@ -1,7 +1,9 @@
+import 'react-native-gesture-handler';
 import React from 'react';
 import {View, StatusBar, StyleSheet} from 'react-native';
+// import {NavigationContainer} from '@react-navigation/native';
 
-import Login from './src/Pages/Login/Index';
+import Login from './src/pages/Login';
 
 function App() {
   return (

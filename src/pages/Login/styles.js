@@ -53,4 +53,20 @@ export default StyleSheet.create({
     fontFamily: 'Montserrat-Medium',
     alignSelf: 'center',
   },
+  signUpContainer: {
+    alignItems: 'center',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    marginTop: 90,
+  },
+  signUpText: {
+    fontFamily: 'Montserrat-Medium',
+    fontSize: 16,
+  },
+  signUpButtonText: {
+    fontFamily: 'Montserrat-Bold',
+    fontSize: 16,
+    textDecorationLine: 'underline',
+    color: '#00897B',
+  },
 });
