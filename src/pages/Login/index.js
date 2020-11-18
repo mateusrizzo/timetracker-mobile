@@ -22,7 +22,8 @@ export default function Login() {
   const navigation = useNavigation();
 
   function handleLogin() {
-    return console.log('oi');
+    console.log(email);
+    console.log(password);
   }
   return (
     <ScrollView keyboardShouldPersistTaps="never">
