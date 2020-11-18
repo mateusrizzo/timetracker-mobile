@@ -6,22 +6,22 @@ import {
   View,
   TouchableOpacity,
   ScrollView,
-  Image,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import SignInImage from '../../assets/images/Illustration.png';
 
 import styles from './styles';
 
 // import api from '../../network/api';
 
 export default function Login() {
+  const [name, setName] = useState(null);
   const [email, setEmail] = useState(null);
   const [password, setPassword] = useState(null);
 
   const navigation = useNavigation();
 
-  function handleLogin() {
+  function handleSignUp() {
+    console.log(name);
     console.log(email);
     console.log(password);
   }
@@ -29,11 +29,24 @@ export default function Login() {
     <ScrollView keyboardShouldPersistTaps="never">
       <View style={styles.container}>
         <View style={styles.titleContainer}>
-          <Text style={styles.title}>Sign In</Text>
+          <Text style={styles.title}>Sign Up</Text>
         </View>
-        <Image style={styles.image} source={SignInImage} />
         <View style={styles.form}>
           <View style={styles.inputContainer}>
+            <Icon name="person" size={14} color="#B0B0C3" style={styles.icon} />
+            <TextInput
+              style={styles.input}
+              autoCapitalize="none"
+              autoCompleteType="name"
+              placeholder="Name"
+              keyboardType="default"
+              returnKeyType="next"
+              returnKeyLabel="next"
+              value={name}
+              onChangeText={setName}
+            />
+          </View>
+          <View style={[styles.inputContainer, styles.bottomInput]}>
             <Icon name="mail" size={14} color="#B0B0C3" style={styles.icon} />
             <TextInput
               style={styles.input}
@@ -58,15 +71,26 @@ export default function Login() {
               onChangeText={setPassword}
             />
           </View>
+          <View style={[styles.inputContainer, styles.bottomInput]}>
+            <Icon name="lock" size={14} color="#B0B0C3" style={styles.icon} />
+            <TextInput
+              style={styles.input}
+              placeholder="Confirm Password"
+              secureTextEntry
+              autoCompleteType="off"
+              value={password}
+              onChangeText={setPassword}
+            />
+          </View>
         </View>
-        <TouchableOpacity style={styles.loginButton} onPress={handleLogin}>
-          <Text style={styles.buttonText}>Login</Text>
+        <TouchableOpacity style={styles.signUpButton} onPress={handleSignUp}>
+          <Text style={styles.buttonText}>Create Account</Text>
         </TouchableOpacity>
       </View>
-      <View style={styles.signUpContainer}>
-        <Text style={styles.signUpText}>Don't have an account?</Text>
-        <TouchableOpacity onPress={() => navigation.navigate('SignUp')}>
-          <Text style={styles.signUpButtonText}> Don't lose time</Text>
+      <View style={styles.loginContainer}>
+        <Text style={styles.loginText}>Already have an account?</Text>
+        <TouchableOpacity onPress={() => navigation.navigate('Login')}>
+          <Text style={styles.loginButtonText}> Login in</Text>
         </TouchableOpacity>
       </View>
     </ScrollView>
