@@ -22,7 +22,16 @@ export default function Login() {
 
   const navigation = useNavigation();
 
-  function handleSignUp() {}
+  async function handleSignUp() {
+    try {
+      const schema = yup.object().shape({
+        name: yup.string().required(),
+        email: yup.string().required().email(),
+        password: yup.string().min(6),
+        confirmPassword: yup.string().matches(password),
+      });
+    } catch (err) {}
+  }
   return (
     <ScrollView keyboardShouldPersistTaps="never">
       <View style={styles.container}>
@@ -34,6 +43,7 @@ export default function Login() {
             <Icon name="person" size={14} color="#B0B0C3" style={styles.icon} />
             <TextInput
               style={styles.input}
+              name="name"
               autoCapitalize="none"
               autoCompleteType="name"
               placeholder="Name"
@@ -48,6 +58,7 @@ export default function Login() {
             <Icon name="mail" size={14} color="#B0B0C3" style={styles.icon} />
             <TextInput
               style={styles.input}
+              name="email"
               autoCapitalize="none"
               autoCompleteType="email"
               placeholder="Email"
@@ -62,6 +73,7 @@ export default function Login() {
             <Icon name="lock" size={14} color="#B0B0C3" style={styles.icon} />
             <TextInput
               style={styles.input}
+              name="password"
               placeholder="Password"
               secureTextEntry
               autoCompleteType="off"
@@ -73,6 +85,7 @@ export default function Login() {
             <Icon name="lock" size={14} color="#B0B0C3" style={styles.icon} />
             <TextInput
               style={styles.input}
+              name="confirmPassword"
               placeholder="Confirm Password"
               secureTextEntry
               autoCompleteType="off"
