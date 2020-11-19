@@ -8,23 +8,21 @@ import {
   ScrollView,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import * as yup from 'yup';
 
 import styles from './styles';
 
-// import api from '../../network/api';
+import api from '../../network/api';
 
 export default function Login() {
   const [name, setName] = useState(null);
   const [email, setEmail] = useState(null);
   const [password, setPassword] = useState(null);
+  const [confirmedPassword, setConfirmedPassword] = useState(null);
 
   const navigation = useNavigation();
 
-  function handleSignUp() {
-    console.log(name);
-    console.log(email);
-    console.log(password);
-  }
+  function handleSignUp() {}
   return (
     <ScrollView keyboardShouldPersistTaps="never">
       <View style={styles.container}>
@@ -78,8 +76,8 @@ export default function Login() {
               placeholder="Confirm Password"
               secureTextEntry
               autoCompleteType="off"
-              value={password}
-              onChangeText={setPassword}
+              value={confirmedPassword}
+              onChangeText={setConfirmedPassword}
             />
           </View>
         </View>
