@@ -1,5 +1,5 @@
 /* eslint-disable react-native/no-inline-styles */
-import React, {useState} from 'react';
+import React from 'react';
 import {useNavigation} from '@react-navigation/native';
 import {
   Text,
@@ -14,14 +14,9 @@ import {Formik} from 'formik';
 
 import styles from './styles';
 
-import api from '../../network/api';
+//import api from '../../network/api';
 
 export default function Login() {
-  // const [name, setName] = useState(null);
-  // const [email, setEmail] = useState(null);
-  // const [password, setPassword] = useState(null);
-  // const [confirmedPassword, setConfirmedPassword] = useState(null);
-
   const navigation = useNavigation();
 
   function handleSignUp(data) {
@@ -53,7 +48,7 @@ export default function Login() {
             confirmPassword: yup
               .mixed()
               .test('match', 'Passwords are not matching', function (password) {
-                return password === this.options.context.confirmPassword;
+                return this.parent.password === this.parent.confirmPassword;
               }),
           })}>
           {({
